@@ -3,6 +3,7 @@ const router = express.Router()
 
 // const messagesTable = []
 
+
 /* GET home page. */
 router.get('/', (req, res, next) => {
   res.render('index', {
