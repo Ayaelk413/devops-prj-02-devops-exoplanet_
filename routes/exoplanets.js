@@ -4,6 +4,7 @@ const router = express.Router();
 
 
 const Exoplanet = require('../models/Exoplanet.js');
+const { uppercase } = require('../utils/utils.js');
 
 /* GET exoplanets index. */
 router.get('/', (req, res, next) => {
@@ -12,12 +13,17 @@ router.get('/', (req, res, next) => {
 
 /* POST add exoplanet. */
 router.post('/add', (req, res, next) => {
-  console.log("POST ADD EXOPLANET");
+  console.log("POST ADD EXOPLANET" + req.body.uniqueNameExoplanet);
+
+//ajouter la fonction ecrite ici .... en ouvrant une condition
+const ok = uppercase(req.body.uniqueNameExoplanet);
+if(ok){
   Exoplanet.save({
     uniqueName: req.body.uniqueNameExoplanet,
     hClass: req.body.hClassExoplanet,
     discoveryYear: req.body.discoveryYearExoplanet
   });
+};
   res.redirect('/exoplanets');
 }); 
 
