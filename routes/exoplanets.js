@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const Exoplanet = require('../models/Exoplanet.js');
-const { checkChar } = require('../utils/utils.js');
+
 
 /* GET exoplanets index. */
 router.get('/', (req, res, next) => {
