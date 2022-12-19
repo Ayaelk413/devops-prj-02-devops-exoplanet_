@@ -10,7 +10,7 @@
         "lint:fix": "eslint --fix .",
         "code:fix": "prettier --write . && eslint --fix . ",
         "commit": "cz",
-        "test": "jest --coverage && exit 1",
+        "test": "jest --coverage",
         "test:watch": "jest --watchAll"
     },
     "dependencies": {
