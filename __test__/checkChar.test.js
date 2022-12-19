@@ -12,4 +12,5 @@ test('checkUniqueName', () => {
   it('false checkUniqueName', () => {
     expect(checkUnqiueName('test++++')).toBe(false)
   })
-}) */
+}) 
+*/
