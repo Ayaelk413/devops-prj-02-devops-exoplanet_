@@ -1,5 +1,3 @@
-
-
 const { checkChar } = require('../utils/utils')
 
 test('checkUniqueName', () => {
@@ -7,7 +5,7 @@ test('checkUniqueName', () => {
 })
 
 test('checkUniqueName', () => {
-    expect( checkChar('test')).toBe(true)
+    expect(checkChar('test')).toBe(true)
 })
 
 /* describe('test suite utils', () => {
@@ -15,4 +13,3 @@ test('checkUniqueName', () => {
     expect(checkUnqiueName('test++++')).toBe(false)
   })
 }) */
-

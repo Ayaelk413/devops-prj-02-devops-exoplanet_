@@ -1,8 +1,7 @@
-const express = require('express')
-const router = express.Router()
+const express = require('express');
+const router = express.Router();
 
 // const messagesTable = []
-
 
 /* GET home page. */
 router.get('/', (req, res, next) => {
@@ -13,7 +12,7 @@ router.get('/', (req, res, next) => {
       'Trappist-1-f',
       'Trappist-1-g'
     ]
-  })
-})
+  });
+});
 
-module.exports = router
+module.exports = router;
