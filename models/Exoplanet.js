@@ -23,4 +23,4 @@ module.exports.search = (uniqueName) => {
     }
   }
   return exoplanetList;
-};
+}; 

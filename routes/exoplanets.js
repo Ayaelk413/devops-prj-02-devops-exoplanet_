@@ -19,7 +19,7 @@ router.post('/add', (req, res, next) => {
     discoveryYear: req.body.discoveryYearExoplanet
   });
   res.redirect('/exoplanets');
-});
+}); 
 
 /* GET search exoplanet. */
 router.get('/search', (req, res, next) => {

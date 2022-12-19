@@ -13,6 +13,6 @@ router.get('/', (req, res, next) => {
       'Trappist-1-g'
     ]
   });
-});
+}); 
 
 module.exports = router;
