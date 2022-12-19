@@ -1,8 +1,9 @@
 name: Exoplanets CI
 
-on: [push]
+on:
+    [push]
     #pull_request:
-       # branches: [main]
+    # branches: [main]
 
 jobs:
     check_code:
