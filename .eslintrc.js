@@ -9,5 +9,8 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
-  rules: {}
-}
+  ignorePatterns: ['__test__/*.js'],
+  rules: {
+    semi: ['error', 'always']
+  }
+};
