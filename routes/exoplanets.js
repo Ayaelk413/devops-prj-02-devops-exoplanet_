@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const Exoplanet = require('../models/Exoplanet.js');
+const { checkChar } = require('../utils/utils.js');
 
 /* GET exoplanets index. */
 router.get('/', (req, res, next) => {
@@ -10,12 +11,15 @@ router.get('/', (req, res, next) => {
 
 /* POST add exoplanet. */
 router.post('/add', (req, res, next) => {
-  console.log('POST ADD EXOPLANET');
-  Exoplanet.save({
-    uniqueName: req.body.uniqueNameExoplanet,
-    hClass: req.body.hClassExoplanet,
-    discoveryYear: req.body.discoveryYearExoplanet
-  });
+  console.log('POST ADD EXOPLANET' + req.body.uniqueNameExoplanet);
+  const ok = checkChar(req.body.uniqueNameExoplanet);
+  if (ok) {
+    Exoplanet.save({
+      uniqueName: req.body.uniqueNameExoplanet,
+      hClass: req.body.hClassExoplanet,
+      discoveryYear: req.body.discoveryYearExoplanet
+    });
+  }
   res.redirect('/exoplanets');
 });
 
