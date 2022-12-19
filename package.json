@@ -9,9 +9,10 @@
         "lint": "eslint .",
         "lint:fix": "eslint --fix .",
         "code:fix": "prettier --write . && eslint --fix . ",
-        "commit": "cz",
-        "test": "jest --coverage",
-        "test:watch": "jest --watchAll"
+        "test":"jest",
+        "test:coverage": "jest --coverage",
+        "test:watch": "jest --watchAll",
+        "commit": "cz"
     },
     "dependencies": {
         "cookie-parser": "~1.4.4",
